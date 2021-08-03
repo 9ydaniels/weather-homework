@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: #568EA3
+}
+.body{
+    background: #568EA3;
+
+}
+
+.topBar{
+background-color: #FFE8D1;
+display: flex;
+height: 3.5rem;
+margin-bottom: 5em;
+
+
+
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+    grid-gap: .7em;
+}
+
+.main{
+    display: flex;
+    justify-content: space-between;
+    padding: 0em, 5em;
+    grid-gap: 3em;
+}
+
+
+button{
+    background: transparent;
+    border: 2px solid ;
+    border-radius: 25px;
+    padding: 0.5em 1 em;
+    color: white;
+    transition: 150ms ease-in-out;
+}
+
+button:hover{
+    background: transparent;
+}
+
+.searchButton{
+    background: blue;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+article{
+    display: flex;
+    flex-direction: column;
+}
+.rightside.h2{
+    text-align: left;
+}
+.statContainer{
+    padding: 0.3em 0;
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 1em;
+    
+}
+.statContainer, .statContainer div{
+    width: 50%;
+    
+}
