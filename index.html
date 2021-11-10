@@ -8,25 +8,153 @@
     <title>Weather App</title>
 </head>
 <body>
-    
-    <header class="topBar">Weather App</header>
+  <header class="topBar">Weather App</header>
+
+  <!-- Main Content Area -->
+  <main>
+
+    <!-- Left Side Bar -->
+    <aside class="sidebar">
+      <form action="" class="searchForm">
+        <input type="search" name="search" id="search" placeholder="Enter City Name"></input>
+        <button type="submit" class="searchButton">Search</button>
+      </form>
+      <div class="locationList">
+        <div class="citiesData"><h1 class="listTitle">Cities</h1><button class="clearCities">Clear Cities</button></div>
+      </div>
+      <div class="buttonContainer"></div>
+    </aside>
+
+    <!-- Right Side Content -->
+    <article class="rightSide">
+      <div class="dashboard">
+        <div class="textContainer">
+          <h4>Weather Dashboard</h4>
+          <h1 class="cityName">City Name, Country</h1>
+          <div class="statContainer">
+            <div>Temperature: <span class="temperature"></span></div>
+            <div>Humidity: <span class="humidity"></span></div>
+            <div>Wind: <span class="wind"></span></div>
+            <div>UV Index: <span class="UV-Index"></span></div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Begin 5 Day Forecast -->
+      <div class="fiveDayForecast">
+        <h1 class="fiveDayForecastText">5-Day Forecast</h1>
+        <div class="cardContainer">
+          <div class="card cardStart">
+            <div class="dateIcon"><h4 class="date">Jan 1st</h4></div>
+              <h3 class="dayText">Monday</h3>
+              <div class="spanContainer">
+                <div class="stat">Temperature: 
+                  <span class="cardTemperature"></span>
+                </div>
+                <div class="stat">Wind Speed: 
+                  <span class="cardWind"></span>
+                </div>
+                <div class="stat">Humidity: 
+                  <span class="cardHumidity"></span>
+                </div>
+              </div>
+          </div>
+          <div class="card cardStart">
+            <div class="dateIcon"><h4 class="date">Jan 2nd</h4></div>
+              <h3 class="dayText">Tuesday</h3>
+              <div class="spanContainer">
+                <div class="stat">Temperature: 
+                  <span class="cardTemperature"></span>
+                </div>
+                <div class="stat">Wind Speed: 
+                  <span class="cardWind"></span>
+                </div>
+                <div class="stat">Humidity: 
+                  <span class="cardHumidity"></span>
+                </div>
+              </div>
+          </div>
+          <div class="card cardStart">
+            <div class="dateIcon"><h4 class="date">Jan 3rd</h4></div>
+              <h3 class="dayText">Wednesday</h3>
+              <div class="spanContainer">
+                <div class="stat">Temperature: 
+                  <span class="cardTemperature"></span>
+                </div>
+                <div class="stat">Wind Speed: 
+                  <span class="cardWind"></span>
+                </div>
+                <div class="stat">Humidity: 
+                  <span class="cardHumidity"></span>
+                </div>
+              </div>
+          </div>
+          <div class="card cardStart">
+            <div class="dateIcon"><h4 class="date">Jan 4th</h4></div>
+              <h3 class="dayText">Thursday</h3>
+              <div class="spanContainer">
+                <div class="stat">Temperature: 
+                  <span class="cardTemperature"></span>
+                </div>
+                <div class="stat">Wind Speed: 
+                  <span class="cardWind"></span>
+                </div>
+                <div class="stat">Humidity: 
+                  <span class="cardHumidity"></span>
+                </div>
+              </div>
+          </div>
+          <div class="card cardStart">
+            <div class="dateIcon"><h4 class="date">Jan 5th</h4></div>
+              <h3 class="dayText">Friday</h3>
+              <div class="spanContainer">
+                <div class="stat">Temperature: 
+                  <span class="cardTemperature"></span>
+                </div>
+                <div class="stat">Wind Speed: 
+                  <span class="cardWind"></span>
+                </div>
+                <div class="stat">Humidity: 
+                  <span class="cardHumidity"></span>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- Footer // Bottom Bar -->
+  
+
+
+<!-- Begin Scripts -->
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS9k5V2rEyMVVqtgHpon-Ro8hRQAatBx8&callback=initmap"></script>
+    <!-- Custom Script -->
+    <script src="./assets/js/script.js"></script>
+  <!-- End Scripts -->
+    <!-- <header class="topBar">Weather App</header>
     
     <main>
         <aside class="sideBar">
             <form action="" class="searchForm">
                 <input type="search" name="search" id="search" placeholder="Search"><input>
-                <button type="submit">Search</button>
+                <button type="submit" class="searchButton">Search</button>
             </form>
             <div class="cities">
                 <ul class="locationList">
                     <li class="location">
                         <button class="locationBtn"></button>
-                        <button class="locationBtn"></button>
-                        <button class="locationBtn"></button>
-                        <button class="locationBtn"></button>
-                        <button class="locationBtn"></button>
-                        <button class="locationBtn"></button>
-                        <button class="locationBtn"></button>
+                        
+                        
                     </li>
 
                 </ul>
@@ -36,32 +164,96 @@
         <article class="rightSide">
             <div class="dashboard">
                 <div class="textContainer">
-
-                    <h2>Dashboard</h2>
-                    <h1 class="cityName">City Name, State</h1>
+                    <h4>Weather Dashboard</h4>
+                    <h1 class="cityName">City Name, Country</h1>
                     <div class="statContainer">
-                        <div class="temp">temperature</div>
-                        <div class="humidity">humidity</div>
-                        <div class="wind">wind</div>
-                        <div class="UV-Index">UV Index</div>
+                        <div>temperature: <span class="temperature"></span></div>
+                        <div>humidity: <span class="humidity"></span></div>
+                        <div>wind: <span class="wind"></span></div>
+                        <div>UV Index: <span class="UV-Index"></span></div>
                     </div>
                 </div>
             
             
-                <div class="5DayForcast">
-                    <h2 class="5DayForcast">5-Day Forcast</h2>
-                    <div class="card">Monday</div>
-                    <div class="card">tuesday</div>
-                    <div class="card">wensday</div>
-                    <div class="card">thursday</div>
-                    <div class="card">friday</div>
-                    <div class="card">saturday</div>
-                    <div class="card">sunday</div>
+                <div class="fiveDayForcast">
+                    <h2 class="fiveDayForcastText">5-Day Forcast</h2>
+                    <div class="cardContainer">
+                        <div class="card cardStart">
+                            <h3 class="dayText">Monday</h3>
+                            <div class="spanContainer">
+                              <div class="stat">Temperature: 
+                                <span class="cardTemperature"></span>
+                              </div>
+                              <div class="stat">Wind Speed: 
+                                <span class="cardWind"></span>
+                              </div>
+                              <div class="stat">Humidity: 
+                                <span class="cardHumidity"></span>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="card cardStart">
+                              <h3 class="dayText">Teusday</h3>
+                              <div class="spanContainer">
+                                <div class="stat">Temperature: 
+                                  <span class="cardTemperature"></span>
+                                </div>
+                                <div class="stat">Wind Speed: 
+                                  <span class="cardWind"></span>
+                                </div>
+                                <div class="stat">Humidity: 
+                                  <span class="cardHumidity"></span>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="card cardStart">
+                              <h3 class="dayText">Wednesday</h3>
+                              <div class="spanContainer">
+                                <div class="stat">Temperature: 
+                                  <span class="cardTemperature"></span>
+                                </div>
+                                <div class="stat">Wind Speed: 
+                                  <span class="cardWind"></span>
+                                </div>
+                                <div class="stat">Humidity: 
+                                  <span class="cardHumidity"></span>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="card cardStart">
+                              <h3 class="dayText">Thursday</h3>
+                              <div class="spanContainer">
+                                <div class="stat">Temperature: 
+                                  <span class="cardTemperature"></span>
+                                </div>
+                                <div class="stat">Wind Speed: 
+                                  <span class="cardWind"></span>
+                                </div>
+                                <div class="stat">Humidity: 
+                                  <span class="cardHumidity"></span>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="card cardStart">
+                              <h3 class="dayText">Friday</h3>
+                              <div class="spanContainer">
+                                <div class="stat">Temperature: 
+                                  <span class="cardTemperature"></span>
+                                </div>
+                                <div class="stat">Wind Speed: 
+                                  <span class="cardWind"></span>
+                                </div>
+                                <div class="stat">Humidity: 
+                                  <span class="cardHumidity"></span>
+                                </div>
+                              </div>
+                            </div>
                 </div>
         </article>
     </main>
     
-    
-    <script src="/assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="/assets/js/script.js"></script> -->
 </body>
 </html>
