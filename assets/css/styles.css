@@ -41,8 +41,8 @@ span {
 }
 
 .topBar {
-    /* background: linear-gradient(103deg,var(--pink),var(--softViolet)); */
-    background: var(--peachRed);
+    background: linear-gradient(103deg,var(--peachRed),var(--offWhite));
+    /*background: var(--peachRed);*/
     height: 2.5em;
     margin-bottom: 4.5em;
     display: flex;
@@ -244,10 +244,11 @@ article {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    color: var(--offWhite);
 }
 
 .stat span {
-    color: var(--violet);
+    color: var(--offWhite);
     font-weight: 700;
 }
 
